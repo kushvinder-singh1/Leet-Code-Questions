@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        bool isFound = false;
+        int index=-1;
+        for (int i = 0; i < haystack.length(); i++) {
+            if (!isFound) {
+                index = i;
+                if (haystack[i] == needle[0]) {
+                    isFound =true;
+                    for (int j = 1; j < needle.length(); j++) {
+                        if (haystack[i+j] != needle[j]) {
+                            isFound = false;
+                            break;
+                        }
+                    }
+                }
+            }else{
+                break;
+            }
+        }
+        return (isFound ? index : -1);
+    }
+};
