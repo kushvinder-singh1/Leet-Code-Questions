@@ -1,0 +1,14 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        isPal=True
+        x1=str(x)
+        for i in range(0,int((len(x1))/2)):
+            if (x1[i]==x1[len(x1)-1-i]):
+                print(isPal)
+            else:
+                isPal=False
+                break
+                print(isPal)
+        return isPal
+
+        
